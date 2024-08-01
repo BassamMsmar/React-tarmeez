@@ -1,10 +1,13 @@
-function butten1(){
-    return(
-        <div>
-            
-        </div>
-    )
+function Button1() {
+  return (
+    
+      <button
+        className="btn btn-primary btn-sm border text-white"
+        type="button"
+      >
+        Tag Button 1
+      </button>
 
-
+  );
 }
-export default butten1
+export default Button1;
