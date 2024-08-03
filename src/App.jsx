@@ -15,7 +15,9 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-8 border">
-            <Content />
+            <Content title="اكاديمية ترميز" content="اكاديمية متخصصة لتعلم البرمجة" />
+            <Content title="اكاديمية ادراك" content="اكاديمية متخصصة لتعلم مجموعة من العلوم"/>
+            <Content title="اكاديمية كورتابز" content="اكاديمية متخصصة لتعلم البايثون "/>
           </div>
 
           <div className="col-4 border bg-light">
