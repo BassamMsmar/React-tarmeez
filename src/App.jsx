@@ -8,26 +8,24 @@ import Content from "./components/content.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
+    <div>
+      <div className="shadow-sm">
+        <Header />
+      </div>
       
 
       <div className="container">
         <div className="row">
-          <div className="col-8 border">
-            <Content title="اكاديمية ترميز" content="اكاديمية متخصصة لتعلم البرمجة" />
-            <Content title="اكاديمية ادراك" content="اكاديمية متخصصة لتعلم مجموعة من العلوم"/>
-            <Content title="اكاديمية كورتابز" content="اكاديمية متخصصة لتعلم البايثون "/>
+          <div className="col-8  my-2">
+            <Content />
           </div>
 
-          <div className="col-4 border bg-light">
+          <div className="col-4  bg-light my-3">
             <Sidebar />
           </div>
-
         </div>
       </div>
-    </>
+    </div>
   );
 }
-
 export default App;
