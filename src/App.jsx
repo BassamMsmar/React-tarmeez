@@ -5,6 +5,8 @@ import "./App.css";
 import Header from "./components/Header.jsx";
 import Sidebar from "./components/sidebar.jsx";
 import Content from "./components/content.jsx";
+import ChangName from './components/ChangName';
+import MyForm from "./components/MyForm.jsx";
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-8  my-2">
-            <Content />
+            {/* <Content /> */}
+            {/* <ChangName /> */}
+            <MyForm />
+
           </div>
 
           <div className="col-4  bg-light my-3">
