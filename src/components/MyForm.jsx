@@ -1,59 +1,92 @@
 import { useState } from "react";
 
 function MyForm() {
-  const [fromInput, setFromInput] = useState({
+  const [myfromInput, setFromInput] = useState({
     username: "",
     password: "",
     isStudent: false,
     globaleInfo: "",
+    country: "",
   });
   return (
     <div>
       <label className="form-label ">User</label>
       <input
         className="form-control"
-        value={fromInput.username}
+        value={myfromInput.username}
         onChange={(e) =>
-          setFromInput({ ...fromInput, username: e.target.value })
+          setFromInput({ ...myfromInput, username: e.target.value })
         }
       />
 
       <label className="form-label mt-3">Password</label>
       <input
         className="form-control"
-        value={fromInput.password}
+        value={myfromInput.password}
         onChange={(e) =>
-          setFromInput({ ...fromInput, password: e.target.value })
+          setFromInput({ ...myfromInput, password: e.target.value })
         }
       />
 
       <label className="form-label mt-3">Is student</label>
-      <input type="checkbox" className="d-block" checked={fromInput.isStudent} onChange={(e) => setFromInput({ ...fromInput, isStudent: e.target.checked })} />
-
+      <input
+        type="checkbox"
+        className="d-block"
+        checked={myfromInput.isStudent}
+        onChange={(e) =>
+          setFromInput({ ...myfromInput, isStudent: e.target.checked })
+        }
+      />
 
       <label className="form-label mt-3">Globale info</label>
       <textarea
         className="form-control"
-        value={fromInput.globaleInfo}
+        value={myfromInput.globaleInfo}
         onChange={(e) =>
-          setFromInput({ ...fromInput, globaleInfo: e.target.value })
+          setFromInput({ ...myfromInput, globaleInfo: e.target.value })
         }
       />
 
-      <button className="btn btn-primary mt-3" type="submit" onClick={() => console.log(fromInput)}>
+      <select
+        value={myfromInput.country}
+        onChange={(e) =>
+          setFromInput({ ...myfromInput, country: e.target.value })
+        }
+      >
+        <option>KSA</option>
+        <option>US</option>
+        <option>UR</option>
+        <option>RU</option>
+        <option>EMU</option>
+      </select>
+
+      <div>
+        <input type="radio" />
+        student
+        <input type="radio" />
+        tea cher
+      </div>
+
+      <button
+        className="btn btn-primary mt-3"
+        type="submit"
+        onClick={() => console.log(myfromInput)}
+      >
         Submit
       </button>
 
       <hr />
       <ul>
         <li>
-          username: {fromInput.username}
+          username: {myfromInput.username}
           <br />
-          password: {fromInput.password}
+          password: {myfromInput.password}
           <br />
-          checkbox: {fromInput.checkbox}
+          checkbox: {myfromInput.checkbox}
           <br />
-          globaleInfo: {fromInput.globaleInfo}
+          globaleInfo: {myfromInput.globaleInfo}
+          <br />
+          country: {myfromInput.country}
         </li>
       </ul>
     </div>
