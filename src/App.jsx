@@ -8,6 +8,7 @@ import Content from "./components/content.jsx";
 import ChangName from './components/ChangName';
 import MyForm from "./components/MyForm.jsx";
 import Challengs from "./components/Challengs3.jsx";
+import Lists from "./components/Lists.jsx";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <div className="col-8  my-2">
             {/* <Content /> */}
             {/* <ChangName /> */}
-            <Challengs />
+            {/* <Challengs /> */}
+            <Lists />
 
           </div>
 
