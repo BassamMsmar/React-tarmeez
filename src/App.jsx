@@ -7,6 +7,7 @@ import Sidebar from "./components/sidebar.jsx";
 import Content from "./components/content.jsx";
 import ChangName from './components/ChangName';
 import MyForm from "./components/MyForm.jsx";
+import Challengs from "./components/Challengs3.jsx";
 
 function App() {
   return (
@@ -21,13 +22,13 @@ function App() {
           <div className="col-8  my-2">
             {/* <Content /> */}
             {/* <ChangName /> */}
-            <MyForm />
+            <Challengs />
 
           </div>
 
-          <div className="col-4  bg-light my-3">
+          {/* <div className="col-4  bg-light my-3">
             <Sidebar />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

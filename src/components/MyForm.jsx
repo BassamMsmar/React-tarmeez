@@ -7,6 +7,7 @@ function MyForm() {
     isStudent: false,
     globaleInfo: "",
     country: "",
+    status: "student",
   });
   return (
     <div>
@@ -61,10 +62,10 @@ function MyForm() {
       </select>
 
       <div>
-        <input type="radio" />
-        student
-        <input type="radio" />
-        tea cher
+        <input type="radio" className="m-2" name="status" value="student" checked={'student' === myfromInput.status} onChange={(e) => setFromInput({ ...myfromInput, status: e.target.value })}/>
+         <span className="mx-3">Student</span>
+        <input type="radio" name="status" value='teacher' checked={'teacher' === myfromInput.status} onChange={(e) => setFromInput({ ...myfromInput, status: e.target.value })}/>
+         <span className="mx-3">Teacher</span>
       </div>
 
       <button
