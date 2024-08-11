@@ -7,7 +7,9 @@ export default function Lists() {
     "Xiaomi",
     "Huawei",
   ]);
-  const ListDevises = devises.map((devise, index) => <li key={index}>{devise}</li>);
+  const ListDevises = devises.map((devise, index) => (
+    <li key={index}>{devise}</li>
+  ));
 
   function AddNewDevise() {
     setDevises([...devises, NewValueDevise]);
