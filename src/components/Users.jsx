@@ -7,7 +7,7 @@ export default function Users() {
     {
       id: 1,
       name: "Bassam",
-      phone: "0552485655",
+      phone: "1234567890",
       email: "bassam@b.com",
       status: "teacher",
       country: "US",
@@ -15,7 +15,7 @@ export default function Users() {
     {
       id: 2,
       name: "Ahmed",
-      phone: "0551234567",
+      phone: "1234567890",
       email: "ahmed@a.com",
       status: "student",
       country: "KSA",
@@ -23,7 +23,7 @@ export default function Users() {
     {
       id: 3,
       name: "Sara",
-      phone: "0559876543",
+      phone: "1234567890",
       email: "sara@s.com",
       status: "teacher",
       country: "UR",
@@ -124,6 +124,7 @@ export default function Users() {
 
   return (
     <div>
+      <h1 className="text-center">Users List</h1>
       <form className="container">
         <div className="row p-2">
           <div className="col-4">
