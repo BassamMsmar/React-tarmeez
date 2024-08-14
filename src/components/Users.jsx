@@ -51,6 +51,18 @@ export default function Users() {
     const newListWithOutUser = users.filter((user) => user.id !== id);
     setUsers(newListWithOutUser);
   };
+
+  const handelEditUser = (id) => {
+    const newUsersList = users.map((user) => {
+      if (user.id == id) {
+        user.name += " 101";
+        return user;
+      } else {
+        return user;
+      }
+    });
+    setUsers(newUsersList);
+  };
   // setUsers.splice(index, 1);
   const listUsers = users.map((user) => (
     <tr key={user.id}>
@@ -83,9 +95,10 @@ export default function Users() {
 
       <td>{user.country}</td>
       <td>
+        {/* edit button */}
         <button
           className="btn btn-primary"
-          onClick={() => handelDeleteUser(user.id)}
+          onClick={() => handelEditUser(user.id)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +114,7 @@ export default function Users() {
         </button>
       </td>
       <td>
+        {/* delete button */}
         <button
           className="btn btn-danger"
           onClick={() => handelDeleteUser(user.id)}
